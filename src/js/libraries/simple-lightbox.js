@@ -6,12 +6,5 @@ let lightbox = new SimpleLightbox('.gallery-link', {
   captions: true,
 });
 
-function initializeLightbox() {
-  if (lightbox && lightbox.destroy) {
-    lightbox.destroy();
-  }
-
-  lightbox = new SimpleLightbox('.gallery-link', {
-    captions: true,
-  });
-}
+// оновлення після кожного добавлення чи сабміті
+lightbox.refresh();
